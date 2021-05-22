@@ -12,7 +12,6 @@ public class Accommodation {
     private Boolean isLike;
 
     //지도정보 필요
-
     public Accommodation() {
         this.id = id;
         this.title = title;
@@ -23,11 +22,9 @@ public class Accommodation {
         this.image = image;
         this.isLike = isLike;
     }
-
-    public Accommodation(Long id, String title, Double reviewRating,
+    public Accommodation( String title, Double reviewRating,
                          Integer reviewCount, Integer charge, String badge,
                           String image, Boolean isLike) {
-        this.id = id;
         this.title = title;
         this.reviewRating = reviewRating;
         this.reviewCount = reviewCount;
