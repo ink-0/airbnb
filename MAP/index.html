@@ -29,38 +29,27 @@
         // 코쿼
         //
         // 지도에 마커를 생성하고 표시한다
-        var marker1 = new kakao.maps.Marker({
-            position: new kakao.maps.LatLng(37.49091340540493, 127.03337782299037), // 마커의 좌표
-            map: map // 마커를 표시할 지도 객체
-        });
+        
 
-        var iwContent = '<div style="padding:5px;">인포윈도우 : 코드스쿼드 </div>' // 인포윈도우에 표시할 내용
+
+        var markerData = [
+        [37.49091340540493, 127.03337782299037,'<div style="padding:5px;">인포윈도우 : 코드스쿼드 </div>'],
+        [37.48466276377677, 127.03447308855446,'<div style="padding:5px;">인포윈도우 : 양재역 </div>'],
+        [37.48883279300998, 127.03246345219723,'<div style="padding:5px;">스타벅스 코드스쿼드점 </div>'],
+        ]
+
+        for(var i=0 ; i<markerData.length ; i++) {
+            var marker = new kakao.maps.Marker({
+                position: new kakao.maps.LatLng(markerData[i][0],markerData[i][1]), // 마커의 좌표
+                map: map // 마커를 표시할 지도 객체
+            });
+
         // 마커 위에 표시할 인포윈도우를 생성한다
 		var infowindow = new kakao.maps.InfoWindow({
-		    content : iwContent
+		    content : markerData[i][2]
 		});
-        infowindow.open(map, marker1);
-
-
-
-
-
-
-        //
-        // 양재역
-        //
-        var marker2 = new kakao.maps.Marker({
-            position: new kakao.maps.LatLng(37.48466276377677, 127.03447308855446), // 마커의 좌표
-            map: map // 마커를 표시할 지도 객체
-        });
-
-        var iwContent2 = '<div style="padding:5px;">인포윈도우 : 양재역 </div>' // 인포윈도우에 표시할 내용
-        // 마커 위에 표시할 인포윈도우를 생성한다
-		var infowindow2 = new kakao.maps.InfoWindow({
-		    content : iwContent2
-		});
-		// 인포윈도우를 지도에 표시한다
-		infowindow2.open(map, marker2);
+        infowindow.open(map, marker);
+        }
 
 
 
