@@ -58,8 +58,11 @@
             var infowindow = new kakao.maps.InfoWindow({
                 content: markerData[i][2]
             });
-            infowindow.open(map, marker);
+            
+            //markers 라는거에다가 마커 정보들을 저장해놓는다
             markers.push(marker);
+
+            // 마우스가 올라와 있을때만 인포창이 생성되고 마우스가 다른곳으로 이동하면 사라지도록 이벤트 등록
             kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
             kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
 
@@ -88,7 +91,7 @@
         // 참고링크
         // https://apis.map.kakao.com/web/sample/
         // https://apis.map.kakao.com/web/wizard/
-
+        // https://www.youtube.com/watch?v=1JgpDcHEkFg&t=47s
 
     </script>
 </body>
