@@ -1,100 +1,60 @@
-# airbnb
-그룹 프로젝트 #4
-<br><br>
+# airbnb 사이트
+airbnb 사이트를 클론해보며 동작 UI를 직접 만들고 , 숙소를 예약할 때 필요한 날짜,요금,인원등의 상태를 관리한 웹 서비스 입니다.
 
-## 팀원 :
-  - iOS : yj
-  - BE : Robin, Dong	
-  - FE : Jenny, Tami
+[React, ContextAPI를 활용한 상태관리, SpringBoot, MySQL]
 
-<br><br>
+## 📌프로젝트 구현
+![프로젝트구현gif](https://user-images.githubusercontent.com/71919983/123778119-c0f3c180-d90b-11eb-8fb3-202e850570b9.gif)
 
-## 기획
+## 📌프로젝트 정보
+### 프로젝트 진행 과정 블로그 정리
+[🔗 airdnd -1부](https://rrecoder.tistory.com/141)  
+[🔗 airdnd -2부](https://rrecoder.tistory.com/147)  
+[🔗 airdnd -3부](https://rrecoder.tistory.com/149)  
 
-- [웹 기획서]()
-- [모바일 기획서]()
-```txt
-기획서에 포함되어 있지 않은 내용은 같이 의논해가면서 만들어보시죠!
-```
-<br><br>
+### 문제 해결과 개선 과정
 
-## 회의실
+|주제|링크|내용요약|
+|------|---|---|
+|문제&해결|[🔗고민과제들](https://github.com/ink-0/airbnb/wiki/%EB%AC%B8%EC%A0%9C%EC%A7%81%EB%A9%B4-&-%ED%95%B4%EA%B2%B0)|문제상황들과 그 해결 과정을 위한 시도|
+|개선|[🔗개선사항](https://github.com/ink-0/airbnb/wiki/%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD)|좋은 코드를 위한 리팩토링 과정|
+|회고|[🔗프로젝트회고](https://github.com/ink-0/airbnb/wiki/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0)|프로젝트 회고와 배운점|
+|협업|[🔗협업 과정](https://github.com/ink-0/airbnb/wiki/%ED%98%91%EC%97%85%EB%B0%A9%EC%8B%9D%EA%B3%BC-%EA%B3%BC%EC%A0%95)|커뮤니케이션과 협업의 기록|
 
-- [모각코 회의실](https://zoom.us/j/7382123035?pwd=NG1TMjd5MFRPdWhwT21XUG03a0ZOQT09)
-- [iOS 수업 회의실](https://zoom.us/j/6239506083?pwd=YjZ4OUQxclhRWmZwdGZQdDdWamFWQT09)
-- [BE 수업 회의실](https://zoom.us/j/5996704860?pwd=NmxDSGJnaEl5YnB3Ky9RR09LNnlEQT09)
-- [프론트 게더방](https://gather.town/app/C1JEKQnsIvvB9zG0/codesquade)
-<br><br>
+### 관련 링크
+[🔗 팀 notion](https://www.notion.so/airdnd-93baaf67ed4544d9a3b40d1aa4a7dab6) 
 
+[🔗 팀 convention](https://github.com/ink-0/airbnb/wiki) 
 
-## 커뮤니케이션
-- 10시에 스크럼: 잡담 시간으로 잠깨우기
-- 16시에 좀 서로 본격적인 이야기하기
-
-<br><br>
-
-## [브랜치 정책](https://github.com/ghojeong/baseball/wiki/%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%A0%95%EC%B1%85)
-`{development part}/{branch header}/{issue number}/{short description}`
-- be, ios 브랜치를 나눈다
-- PR 보낼때, 백엔드는 be 에서, 모바일은 ios 브랜치에서 PR 을 보낸다. -> codesquad-2021/team-20
-```
-development part : iOS, BE 등 소속 명시
-branch header : 아래의 header 참조
-issue number : Project의 Issue 넘버
-short description : 브랜치의 짧은 설명
-```
-
-- 예시) 
-  - iOS/Featrue/13/SideBar
+[🔗 FE API 요구사항](https://github.com/ink-0/airbnb/wiki/FE-API-%EA%B5%AC%EC%84%B1)  
 
 
-### 브랜치 나누기
-- 프론트랑 했을떄
-  - dev : 합치는거(배포)
-  - dev-BE : 
-  - dev-FE  : front
+### 팀 구성 
 
-<br><br>
+|FE|BE|
+|---|---|
+|Jenny|Dong|
+|Tami||
+  
+## 📌파일 구조
+[🔗 component 다이어그램](https://drive.google.com/file/d/13ElfK5XcWA_TtAZ3Bh6-GEVlhodBu7gh/view?usp=sharing)  
 
+![airdnd](https://user-images.githubusercontent.com/71919983/123778885-8c343a00-d90c-11eb-8a8d-c8dd23467f10.png)
 
-## [커밋 메시지 정책]
-```
-{commit header}: {commit title}
+<details>
+<summary>파일구조 이미지</summary>
+<div markdown="1">
+  
+![스크린샷 2021-06-29 오후 7 05 02](https://user-images.githubusercontent.com/71919983/123779266-f4831b80-d90c-11eb-879a-fc278ce40463.png)
+  
+</div>
+</details>
 
-{commit message}
-```
+Home, Atoms, utils로 크게 나누어져 있으며 Atoms에는 공통적으로 사용되는 Modal이 , Home에는 공통요소를 제외한 Home화면에서 필요한 component로 구성되어 있다.  
 
-- Commit Header
-  - feat: 신규 기능 구현 : 사용자를 위한 신 기능; 새로운 빌드 관련 기능은 미포함
-  - fix: 버그나 에러 수정 : 사용자 버그 수정; 빌드 관련 버그 픽스 미포함
-  - refactor: 리팩토링 : Production Code ( 비즈니스 로직 ?)의 수정사항; 변수의 이름 변경 포함.
-  - style: 코드 스타일 수정 : 포멧, 잊어버린 세미 콜론 등; Production Code의 코드 변경이 없음.
-  - docs: 문서 작업 : 문서의 변경점
-  - test: 테스트 코드 : 빠진 테스트의 추가, 테스트의 리팩터링; Production Code의 변경 없음
-  - chore: 그외 기타 : updating grunt tasks etc; Production Code의 변경 없음
+## 📌 기술 요구 사항
+함수형 프로그래밍을 활용한 데이터 
+- **ContextAPI**를 활용한 상태관리
+- **동적 UI**를 직접 구현하기
+- **최적화** 관련한 다양한 훅 메서드 활용하기
 
-<br><br>
-
-## 리드미
-- BE : ./BE/README.md
-- FE : ./FE/README.md
-- iOS : ./iOS/README.md
-
-<br><br>
-
-
-## 목업 API
-- 링크 : 
-
-위키에서 추가
-
-<br><br><br>
-
-
-프론트개발
-백엔드개발
-결과물
-회고록
-제코배 폼 좀 
-
-# 끝
